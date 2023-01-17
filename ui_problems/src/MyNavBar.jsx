@@ -21,6 +21,7 @@ function MyNavBar() {
             <Nav.Link as= {Link}  to="/">Home</Nav.Link>
             <Nav.Link as= {Link}  to="/resumeBuilder">Resume Builder</Nav.Link>
             <Nav.Link as= {Link}  to="/todoApp">ToDoAPP</Nav.Link>
+            <Nav.Link as= {Link}  to="/input">Input Form Page</Nav.Link>
             
           </Nav>
           <Nav className='ms-auto'>

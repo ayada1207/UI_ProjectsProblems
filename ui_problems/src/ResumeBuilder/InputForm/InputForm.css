@@ -1,0 +1,7 @@
+.coantainer {
+    display:flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin-top: 5px;
+    min-height: 200px;
+}

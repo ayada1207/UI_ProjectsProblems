@@ -7,29 +7,30 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyNavBar from './MyNavBar';
 import ResumeBuilder from './ResumeBuilder/ResumeBuilder';
+import InputForm from './AgeCalculator/InputForm';
 
 function App() {
 
-  const [toDoList,setToDoList] = useState(data);
+  const [toDoList, setToDoList] = useState(data);
 
-  const handleToggle = (id)=>{
-    let mapped = toDoList.map(task =>{
-        return (task.id === Number(id)) ? {...task, complete: !task.complete} :{ ...task};
+  const handleToggle = (id) => {
+    let mapped = toDoList.map(task => {
+      return (task.id === Number(id)) ? { ...task, complete: !task.complete } : { ...task };
     })
     setToDoList(mapped);
-}
+  }
 
-const handleFilter = () => {
-  let filtered = toDoList.filter(task => {
-    return !task.complete;
-  });
-  setToDoList(filtered);
-}
-const  addTask= (userInput)=>{
-let copy = [...toDoList];
-copy =[...copy, {id:toDoList.length+1,task:userInput,complete:false}];
-setToDoList(copy);
-}
+  const handleFilter = () => {
+    let filtered = toDoList.filter(task => {
+      return !task.complete;
+    });
+    setToDoList(filtered);
+  }
+  const addTask = (userInput) => {
+    let copy = [...toDoList];
+    copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
+    setToDoList(copy);
+  }
 
   return (
     <BrowserRouter>
@@ -44,12 +45,11 @@ setToDoList(copy);
           </>
         </div>}></Route>
 
-        <Route path='/resumeBuilder' element={<ResumeBuilder/>}>
-
-        </Route>
+        <Route path='/resumeBuilder' element={<ResumeBuilder />}> </Route>
+        <Route path='/input' element={<InputForm />}> </Route>
       </Routes>
     </BrowserRouter>
-  
+
   );
 }
 

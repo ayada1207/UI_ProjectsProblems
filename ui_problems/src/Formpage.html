@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Form>
+    <label for="name">Name</label>
+    <input type="text" placeholder="Enter Name">
+
+    <label for="student" >Student</label>
+    <input type="radio" id="student" name="proffession" >
+
+    <label for="working" >WorkingProfession</label>
+    <input type="radio" id="working" name="proffession">
+    <br><br>
+    <label for="dob">Date Of Birth</label>
+    <input type="date" id="dob" value="dob" onclick="{() => document.getElementById(dob).value}" >
+    <br>
+    <label for="age">Age</label>
+    <input type="number">
+
+    <select name="qualification" id="qualification">Highest Qualification
+<option value="X">X</option>
+<option value="XII">XII</option>
+<option value="Grad">Gradudation</option>
+<option value="pg">Post Graduation</option>
+<option value="other">Other</option>
+
+    </select>
+
+   
+    </Form>
+</body>
+
+<script src="formPage.js"> </script>
+</html>
